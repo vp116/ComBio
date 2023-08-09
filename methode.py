@@ -93,6 +93,7 @@ def ajouter_Produit(self):
     valeurs = (nom_prod, prix_prod, categorie_prod, qte)
     if self.gestionnaire_db.executer_requete(insert_query, valeurs):
         print("Produit ajouté avec succès.")
+        message_info("Info", "Produit ajouté avec succès.")
 
 
 def supprimer_Produit(self):
@@ -100,6 +101,7 @@ def supprimer_Produit(self):
     delete_query = "DELETE FROM produits WHERE libelle=%s;"
     if self.gestionnaire_db.executer_requete(delete_query, (nom_prod,)):
         print("Produit supprimé avec succès.")
+        message_info("Info", "Produit supprimé avec succès.")
 
 
 def on_supprimer_clicked(self):
@@ -112,10 +114,13 @@ def on_supprimer_clicked(self):
         delete_query = "DELETE FROM clients WHERE noclient = %s;"
         if self.gestionnaire_db.executer_requete(delete_query, (client_id_to_delete,)):
             print("Client avec ID {} supprimé avec succès.".format(client_id_to_delete))
+            message_info("Succès", f"Client avec ID {client_id_to_delete} supprimé avec succès.")
         else:
+            message_error("Error", "Erreur lors de la suppression du client.")
             print("Erreur lors de la suppression du client.")
 
     except Exception as e:
+        message_error("Erreur", f"Erreur lors de la suppression: {e}")
         print("Erreur lors de la suppression:", e)
 
     print("Bouton Supprimer cliqué !")
@@ -128,7 +133,7 @@ def message_info(title: str, message: str):
     success_self.setWindowTitle(title)
     success_self.setStandardButtons(QMessageBox.Ok)
     success_self.setStyleSheet(styles)
-    success_self.setWindowIcon(QIcon("images/image/btp.ico"))
+    # success_self.setWindowIcon(QIcon("images/image/btp.ico"))
     success_self.exec()
 
 
@@ -137,7 +142,7 @@ def message_error(title: str, self: str):
     message.setIcon(QMessageBox.Warning)
     message.setText(self)
     message.setWindowTitle(title)
-    message.setWindowIcon(QIcon("images/image/btp.ico"))
+    # message.setWindowIcon(QIcon("images/image/btp.ico"))
     message.setStyleSheet(styles)
     message.exec()
 
