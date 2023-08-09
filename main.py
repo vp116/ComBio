@@ -2,8 +2,9 @@ import os
 import sys
 
 from manage_data import ManageData
-from methode import toggleMenu
+from methode import *
 from qt_core import *
+from ui_center_menu import Ui_StackedWidget
 from ui_main_app import Ui_MainWindow
 
 os.environ["QT_FONT_DPI"] = "96"
@@ -15,15 +16,19 @@ class MyWindow(QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
-        # # Créez une instance de votre classe de gestion de la base de données
-        # self.gestionnaire_db = ManageData(
-        #     host="localhost",
-        #     user="root",
-        #     password="",
-        #     database="projetgl"
-        # )
+        # Créez une instance de votre classe de gestion de la base de données
+        self.gestionnaire_db = ManageData(
+            host="localhost",
+            user="root",
+            password="",
+            database="projetgl"
+        )
 
         self.ui.toogle_menu.clicked.connect(lambda: toggleMenu(self, 245))
+        self.pages = Ui_StackedWidget()
+        self.pages.setupUi(self.ui.page)
+        # self.ui.page.setCurrentWidget(self.pages.gest_client_page)
+        setup_ui(self)
 
     # def closeEvent(self, event):
     #

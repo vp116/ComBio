@@ -224,3 +224,16 @@ def close_page(self):
     self.animation.setEndValue(width_extended)
     self.animation.setEasingCurve(QEasingCurve.InOutQuart)
     self.animation.start()
+
+
+def setup_ui(self):
+    self.pages.gest_prod_btn.clicked.connect(
+        lambda: self.ui.page.setCurrentWidget(self.pages.gest_prod_page))
+    self.pages.gest_client_btn.clicked.connect(
+        lambda: self.ui.page.setCurrentWidget(self.pages.gest_client_btn))
+    self.ui.panier_btn.clicked.connect(lambda: self.ui.page.setCurrentWidget(self.pages.panier_page))
+    self.ui.accueil_btn.clicked.connect(lambda: self.ui.page.setCurrentWidget(self.pages.home_page))
+    self.ui.space_admin_btn.clicked.connect(lambda: self.ui.page.setCurrentWidget(self.pages.space_admin_page))
+    self.pages.gest_client_btn.clicked.connect(lambda: self.ui.page.setCurrentWidget(self.pages.gest_client_page))
+    self.pages.stock_tab.horizontalHeader().resizeSection(0, 400)
+    self.pages.stock_tab.horizontalHeader().resizeSection(1, 180)
