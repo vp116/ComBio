@@ -1,4 +1,5 @@
 import os
+import sys
 
 from manage_data import ManageData
 from qt_core import *
@@ -18,9 +19,60 @@ class MyWindow(QMainWindow):
             database="projetgl"
         )
 
+    def closeEvent(self, event):
+
+        réponse = QMessageBox(self)
+        réponse.setWindowTitle("Message")
+        réponse.setText("Êtes-vous sûr de vouloir quitter ?")
+        réponse.setIcon(QMessageBox.Question)
+        réponse.setStyleSheet("""
+                 QMessageBox {
+                     background-color: #f8f8f8;
+                     border: 2px solid #c3c3c3;
+                     border-radius: 5px;
+                     font-size: 14px;
+                     padding: 10px;
+                 }
+
+                 QMessageBox QLabel {
+                     color: #000000;
+                     font-weight: bold;
+                 }
+
+                 QMessageBox QPushButton {
+                     background-color: #f0f0f0;
+                     border: 2px solid #c3c3c3;
+                     border-radius: 5px;
+                     font-size: 12px;
+                     padding: 5px;
+                     min-width: 80px;
+                 }
+
+                 QMessageBox QPushButton:hover {
+                     background-color: #d0d0d0;
+                 }
+             """)
+
+        # Ajouter une icône personnalisée
+        # icone = QIcon("images/image/btp.ico")
+        # réponse.setWindowIcon(icone)
+
+        réponse.setStandardButtons(QMessageBox.Yes | QMessageBox.No)
+        réponse.button(QMessageBox.Yes).setText("Oui")
+        réponse.button(QMessageBox.No).setText("Non")
+        réponse.setDefaultButton(QMessageBox.No)
+
+        if réponse.exec() == QMessageBox.Yes:
+            event.accept()
+        # elif not self.confirm_deconnexion:
+        #     event.ignore()
+
+        else:
+            event.ignore()
+
 
 if __name__ == '__main__':
-    app = QApplication([])
+    app = QApplication(sys.argv)
     win = MyWindow()
     win.show()
-    app.exec()
+    sys.exit(app.exec())
