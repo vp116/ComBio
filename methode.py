@@ -1,3 +1,5 @@
+from PySide6 import QtCore
+
 from qt_core import *
 
 styles = """
@@ -185,3 +187,40 @@ def show_confirmation_dialog(title: str, message: str):
                         """)
 
     return selfBox.exec()
+
+
+def toggleMenu(self, maxWidth):
+    # GET WIDTH
+    width = self.ui.frame_left_menu.width()
+    max_extend = maxWidth
+    standard = 0
+    if width == 0:
+        width_extended = max_extend
+        # self.ui.toogleSildeBtn.setIcon(QIcon("images/icon_svg/arrow_back_ios_FILL0_wght400_GRAD0_opsz48.svg"))
+    else:
+        width_extended = standard
+        # self.ui.toogleSildeBtn.setIcon(QIcon("images/icon_svg/menu_FILL0_wght400_GRAD0_opsz40.svg"))
+    # ANIMATION
+    self.animation = QPropertyAnimation(
+        self.ui.frame_left_menu, b"minimumWidth")
+    self.animation.setDuration(400)
+    self.animation.setStartValue(width)
+    self.animation.setEndValue(width_extended)
+    self.animation.setEasingCurve(QtCore.QEasingCurve.InOutQuart)
+    self.animation.start()
+
+
+def close_page(self):
+    # GET WIDTH
+    width = self.ui.self.ui.frame_left_menu.width()
+    max_extend = self.ui.self.ui.frame_left_menu.maximumWidth()
+    standard = 0
+    # SET MAX WIDTH
+    width_extended = standard if width == max_extend else max_extend
+    # ANIMATION
+    self.animation = QPropertyAnimation(self.ui.self.ui.frame_left_menu, b"minimumWidth")
+    self.animation.setDuration(500)
+    self.animation.setStartValue(width)
+    self.animation.setEndValue(width_extended)
+    self.animation.setEasingCurve(QEasingCurve.InOutQuart)
+    self.animation.start()
