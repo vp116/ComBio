@@ -23,12 +23,21 @@ class MyWindow(QMainWindow):
             password="",
             database="projetgl"
         )
+        self.gestionnaire_db.se_connecter()
 
         self.ui.toogle_menu.clicked.connect(lambda: toggleMenu(self, 245))
         self.pages = Ui_StackedWidget()
         self.pages.setupUi(self.ui.page)
         # self.ui.page.setCurrentWidget(self.pages.gest_client_page)
+
+        # appel des methode du module
         setup_ui(self)
+        setup_user_info_layout(self)
+        # supprimer_Produit(self)
+        # ajouter_Produit(self)
+        # display_tab(self)
+        # display_prod(self)
+
 
     # def closeEvent(self, event):
     #

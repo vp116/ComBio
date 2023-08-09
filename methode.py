@@ -1,5 +1,6 @@
 from PySide6 import QtCore
 
+from Gui.widget import table_info
 from qt_core import *
 
 styles = """
@@ -49,7 +50,7 @@ def setup_user_info_layout(self):
         bouton_supprimer = utilisateur.get_bouton_supprimer()
 
         # Connexion des signaux des boutons aux slots correspondants
-        bouton_supprimer.clicked.connect(self.on_supprimer_clicked)
+        bouton_supprimer.clicked.connect(on_supprimer_clicked)
 
     # Ajout du layout des utilisateurs à la zone de défilement
     self.pages.scroll_area_content.setLayout(layout_utilisateurs)
@@ -59,8 +60,9 @@ def display_tab(self):
     # Récupération des produits dans la base de données en utilisant la classe de gestion de la BDD
     query = "SELECT * FROM produits"
     list_produits = self.gestionnaire_db.executer_requete_fetchall(query)
+    print(list_produits)
 
-    result = [(produit[1], produit[4]) for produit in list_produits]  # Création de la liste des tuples (nom, qte)
+    result = [(produit[1], produit[3]) for produit in list_produits]  # Création de la liste des tuples (nom, qte)
 
     self.pages.stock_tab.setRowCount(0)
 
@@ -88,11 +90,11 @@ def ajouter_Produit(self):
     nom_prod = self.pages.nom_prod_le.text()
     categorie_prod = self.pages.categorie_prod_le.text()
     prix_prod = self.pages.prix_prod_le.text()
-    qte = self.pages.textEdit.toPlainText()
+    des = self.pages.textEdit.toPlainText()
 
     # Utilisation de votre classe de gestion de la base de données pour exécuter la requête
-    insert_query = "INSERT INTO produits (libelle, prixvente, codecateg, qte) VALUES (%s, %s, %s, %s);"
-    valeurs = (nom_prod, prix_prod, categorie_prod, qte)
+    insert_query = "INSERT INTO produits (libelle, prixvente,categorie, description) VALUES (%s, %s, %s, %s);"
+    valeurs = (nom_prod, prix_prod, categorie_prod, des)
     if self.gestionnaire_db.executer_requete(insert_query, valeurs):
         print("Produit ajouté avec succès.")
         message_info("Info", "Produit ajouté avec succès.")
@@ -237,3 +239,54 @@ def setup_ui(self):
     self.pages.gest_client_btn.clicked.connect(lambda: self.ui.page.setCurrentWidget(self.pages.gest_client_page))
     self.pages.stock_tab.horizontalHeader().resizeSection(0, 400)
     self.pages.stock_tab.horizontalHeader().resizeSection(1, 180)
+
+
+def modif_info_user(self):
+    nom = self.pages.modif_nom_le.text()
+    prenom = self.pages.modif_prenom_le.text()
+    adresse = self.pages.modif_adress_le.text()
+    contact = self.pages.modif_contact_le.text()
+    # Supposons que vous ayez un objet gestionnaire_db de la classe ManageData
+    nom_client = self.pages.label_nom.text()
+    prenom_client = self.pages.label_prenom.text()
+
+    requete_id_client = "SELECT id_client FROM clients WHERE nom = %s AND prenom = %s"
+    valeurs = (nom_client, prenom_client)
+
+    resultat = self.gestionnaire_db.executer_requete_fetchone(requete_id_client, valeurs)
+
+    if resultat:
+        id_client = resultat[0]
+        print("L'ID du client {} {} est : {}".format(nom_client, prenom_client, id_client))
+        query = "UPDATE clients SET nom = %s, prenom = %s, adresse = %s, contact = %s WHERE id_client = %s;"
+        valeur = (nom, prenom, adresse, contact, id_client)
+
+        self.gestionnaire_db.executer_requete(query, valeur)
+        message_info("Information", "Information modifier avec succès")
+    else:
+        print("Aucun client trouvé avec le nom {} {}.".format(nom_client, prenom_client))
+
+
+def display_info_user(self):
+    # Supposons que vous ayez un objet gestionnaire_db de la classe ManageData
+    nom_client = "Nom du client"
+    prenom_client = "Prénom du client"
+
+    requete_info_client = "SELECT * FROM clients WHERE nom = %s AND prenom = %s"
+    valeurs = (nom_client, prenom_client)
+
+    resultat = self.gestionnaire_db.executer_requete_fetchone(requete_info_client, valeurs)
+
+    if resultat:
+        id_client = resultat[0]
+        nom = resultat[1]
+        prenom = resultat[2]
+        email = resultat[3]
+        numero = resultat[4]
+
+        self.pages.label_nom.setText(nom)
+        self.pages.label_prenom.setText(prenom)
+        self.pages.label_adress.setText(email)
+        self.pages.label_contact.setText(numero)
+    else:
+        print("Aucun client trouvé avec le nom {} {}.".format(nom_client, prenom_client))

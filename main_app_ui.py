@@ -186,8 +186,6 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_3.addWidget(self.label_number_notify_2, 0, Qt.AlignRight|Qt.AlignTop)
 
-        self.panier_btn.raise_()
-        self.label_number_notify_2.raise_()
 
         self.head_menu_layout.addWidget(self.notifiy_frame)
 

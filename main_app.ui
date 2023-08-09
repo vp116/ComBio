@@ -381,8 +381,6 @@ border:none;
               </widget>
              </item>
             </layout>
-            <zorder>panier_btn</zorder>
-            <zorder>label_number_notify_2</zorder>
            </widget>
           </item>
           <item>
@@ -596,7 +594,7 @@ border:none;
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
             </property>
-            <widget class="QWidget" name="pagePage1" native="true"/>
+            <widget class="QWidget" name="pagePage1"/>
            </widget>
           </item>
          </layout>

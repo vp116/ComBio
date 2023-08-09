@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'center_menuSAYltq.ui'
+## Form generated from reading UI file 'center_menuAVnulS.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.1
 ##
@@ -237,6 +237,94 @@ class Ui_StackedWidget(object):
         self.frame_8.setFrameShadow(QFrame.Raised)
         self.gridLayout_4 = QGridLayout(self.frame_8)
         self.gridLayout_4.setObjectName(u"gridLayout_4")
+        self.stock_tab = QTableWidget(self.frame_8)
+        if (self.stock_tab.columnCount() < 2):
+            self.stock_tab.setColumnCount(2)
+        __qtablewidgetitem = QTableWidgetItem()
+        self.stock_tab.setHorizontalHeaderItem(0, __qtablewidgetitem)
+        __qtablewidgetitem1 = QTableWidgetItem()
+        self.stock_tab.setHorizontalHeaderItem(1, __qtablewidgetitem1)
+        self.stock_tab.setObjectName(u"stock_tab")
+        self.stock_tab.setMaximumSize(QSize(600, 16777215))
+        self.stock_tab.setStyleSheet(u"/* Style de la table sublime */\n"
+"            QTableWidget {\n"
+"                border: 1px solid #dee2e6;\n"
+"                border-collapse: collapse;\n"
+"                width: 100%;\n"
+"                font-size: 16px;\n"
+"            }\n"
+"\n"
+"            /* Style des cellules de la table sublime */\n"
+"            QTableWidget::item {\n"
+"                border: 1px solid #dee2e6;\n"
+"                padding: 10px;\n"
+"                text-align: center;\n"
+"                background-color: #f2f2f2;\n"
+"                color: #333;\n"
+"            }\n"
+"\n"
+"            /* Style de l'en-t\u00eate de la table sublime */\n"
+"            QTableWidget::item:selected {\n"
+"                background-color: #007bff;\n"
+"                color: #ffffff;\n"
+"            }\n"
+"\n"
+"            /* Style des lignes paires de la table sublime */\n"
+"            QTableWidget::item:alternate {\n"
+"                background-color: #e9ecef;\n"
+"            }\n"
+"\n"
+"            /* Style des lignes impaires de la "
+                        "table sublime */\n"
+"            QTableWidget::item:!alternate {\n"
+"                background-color: #ffffff;\n"
+"            }\n"
+"\n"
+"            /* Style des lignes au survol de la table sublime */\n"
+"            QTableWidget::item:hover {\n"
+"                background-color: #d4edda;\n"
+"            }\n"
+"\n"
+"            /* Style de l'en-t\u00eate de la table sublime */\n"
+"            QHeaderView::section {\n"
+"                background-color: #f8f9fa;\n"
+"                color: #212529;\n"
+"                padding: 3px;\n"
+"                border: 1px solid #dee2e6;\n"
+"                font: 700 11pt \"Segoe UI\";\n"
+"            }\n"
+"\n"
+"            /* Style des barres de d\u00e9filement de la table sublime */\n"
+"            QScrollBar:vertical, QScrollBar:horizontal {\n"
+"                background-color: #f8f9fa;\n"
+"                width: 8px;\n"
+"            }\n"
+"\n"
+"            QScrollBar::handle:vertical, QScrollBar::handle:horizontal {\n"
+"                background-color: #007bff;\n"
+""
+                        "                border-radius: 4px;\n"
+"            }\n"
+"\n"
+"            QScrollBar::add-line:vertical, QScrollBar::add-line:horizontal,\n"
+"            QScrollBar::sub-line:vertical, QScrollBar::sub-line:horizontal {\n"
+"                background: none;\n"
+"            }\n"
+"\n"
+"            QScrollBar::add-page:vertical, QScrollBar::add-page:horizontal,\n"
+"            QScrollBar::sub-page:vertical, QScrollBar::sub-page:horizontal {\n"
+"                background: none;\n"
+"            }")
+        self.stock_tab.horizontalHeader().setMinimumSectionSize(180)
+        self.stock_tab.horizontalHeader().setDefaultSectionSize(200)
+        self.stock_tab.horizontalHeader().setProperty("showSortIndicator", True)
+        self.stock_tab.horizontalHeader().setStretchLastSection(True)
+        self.stock_tab.verticalHeader().setHighlightSections(False)
+        self.stock_tab.verticalHeader().setProperty("showSortIndicator", True)
+        self.stock_tab.verticalHeader().setStretchLastSection(True)
+
+        self.gridLayout_4.addWidget(self.stock_tab, 3, 0, 1, 1)
+
         self.option_stockage = QGroupBox(self.frame_8)
         self.option_stockage.setObjectName(u"option_stockage")
         self.option_stockage.setMaximumSize(QSize(549, 110))
@@ -477,92 +565,9 @@ class Ui_StackedWidget(object):
 
         self.gridLayout_4.addWidget(self.label_9, 0, 0, 1, 1)
 
-        self.stock_tab = QTableWidget(self.frame_8)
-        if (self.stock_tab.columnCount() < 2):
-            self.stock_tab.setColumnCount(2)
-        __qtablewidgetitem = QTableWidgetItem()
-        self.stock_tab.setHorizontalHeaderItem(0, __qtablewidgetitem)
-        __qtablewidgetitem1 = QTableWidgetItem()
-        self.stock_tab.setHorizontalHeaderItem(1, __qtablewidgetitem1)
-        self.stock_tab.setObjectName(u"stock_tab")
-        self.stock_tab.setMaximumSize(QSize(600, 16777215))
-        self.stock_tab.setStyleSheet(u"/* Style de la table sublime */\n"
-"            QTableWidget {\n"
-"                border: 1px solid #dee2e6;\n"
-"                border-collapse: collapse;\n"
-"                width: 100%;\n"
-"                font-size: 16px;\n"
-"            }\n"
-"\n"
-"            /* Style des cellules de la table sublime */\n"
-"            QTableWidget::item {\n"
-"                border: 1px solid #dee2e6;\n"
-"                padding: 10px;\n"
-"                text-align: center;\n"
-"                background-color: #f2f2f2;\n"
-"                color: #333;\n"
-"            }\n"
-"\n"
-"            /* Style de l'en-t\u00eate de la table sublime */\n"
-"            QTableWidget::item:selected {\n"
-"                background-color: #007bff;\n"
-"                color: #ffffff;\n"
-"            }\n"
-"\n"
-"            /* Style des lignes paires de la table sublime */\n"
-"            QTableWidget::item:alternate {\n"
-"                background-color: #e9ecef;\n"
-"            }\n"
-"\n"
-"            /* Style des lignes impaires de la "
-                        "table sublime */\n"
-"            QTableWidget::item:!alternate {\n"
-"                background-color: #ffffff;\n"
-"            }\n"
-"\n"
-"            /* Style des lignes au survol de la table sublime */\n"
-"            QTableWidget::item:hover {\n"
-"                background-color: #d4edda;\n"
-"            }\n"
-"\n"
-"            /* Style de l'en-t\u00eate de la table sublime */\n"
-"            QHeaderView::section {\n"
-"                background-color: #f8f9fa;\n"
-"                color: #212529;\n"
-"                padding: 3px;\n"
-"                border: 1px solid #dee2e6;\n"
-"                font: 700 11pt \"Segoe UI\";\n"
-"            }\n"
-"\n"
-"            /* Style des barres de d\u00e9filement de la table sublime */\n"
-"            QScrollBar:vertical, QScrollBar:horizontal {\n"
-"                background-color: #f8f9fa;\n"
-"                width: 8px;\n"
-"            }\n"
-"\n"
-"            QScrollBar::handle:vertical, QScrollBar::handle:horizontal {\n"
-"                background-color: #007bff;\n"
-""
-                        "                border-radius: 4px;\n"
-"            }\n"
-"\n"
-"            QScrollBar::add-line:vertical, QScrollBar::add-line:horizontal,\n"
-"            QScrollBar::sub-line:vertical, QScrollBar::sub-line:horizontal {\n"
-"                background: none;\n"
-"            }\n"
-"\n"
-"            QScrollBar::add-page:vertical, QScrollBar::add-page:horizontal,\n"
-"            QScrollBar::sub-page:vertical, QScrollBar::sub-page:horizontal {\n"
-"                background: none;\n"
-"            }")
-        self.stock_tab.horizontalHeader().setMinimumSectionSize(180)
-        self.stock_tab.horizontalHeader().setDefaultSectionSize(200)
-        self.stock_tab.horizontalHeader().setProperty("showSortIndicator", True)
-        self.stock_tab.horizontalHeader().setStretchLastSection(True)
-        self.stock_tab.verticalHeader().setHighlightSections(False)
-        self.stock_tab.verticalHeader().setProperty("showSortIndicator", True)
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
-        self.gridLayout_4.addWidget(self.stock_tab, 3, 0, 1, 1)
+        self.gridLayout_4.addItem(self.verticalSpacer, 4, 0, 1, 1)
 
 
         self.horizontalLayout_5.addWidget(self.frame_8)
@@ -969,6 +974,231 @@ class Ui_StackedWidget(object):
         StackedWidget.addWidget(self.panier_page)
         self.space_client_page = QWidget()
         self.space_client_page.setObjectName(u"space_client_page")
+        self.verticalLayout_7 = QVBoxLayout(self.space_client_page)
+        self.verticalLayout_7.setObjectName(u"verticalLayout_7")
+        self.label = QLabel(self.space_client_page)
+        self.label.setObjectName(u"label")
+        self.label.setMaximumSize(QSize(16777215, 70))
+        self.label.setStyleSheet(u"font-size:33px;font-weight: bold;\n"
+"    margin-bottom: 5px;")
+
+        self.verticalLayout_7.addWidget(self.label)
+
+        self.sub_frame_space_client = QFrame(self.space_client_page)
+        self.sub_frame_space_client.setObjectName(u"sub_frame_space_client")
+        self.sub_frame_space_client.setStyleSheet(u"/* Style pour la frame */\n"
+"#frame_display_info,#frame_modif_info {\n"
+"    border: 1px solid rgba(108, 117, 125, 0.125); /* Couleur de bordure par d\u00e9faut */\n"
+"    border-radius: 10px;\n"
+"    padding: 10px;\n"
+"    background-color: white;\n"
+"    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n"
+"}\n"
+"\n"
+"/* Style pour la frame au survol */\n"
+"#frame_display_info:hover,#frame_modif_info:hover {\n"
+"    border-color: var(--bs-secondary-color); /* Couleur de bordure au survol */\n"
+"    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);\n"
+"}\n"
+"\n"
+"/* Style pour les labels */\n"
+".QLabel {\n"
+"    font-weight: bold;\n"
+"    margin-bottom: 5px;\n"
+"}\n"
+"\n"
+"/* Style pour les boutons */\n"
+".QPushButton{\n"
+"    background-color: #6c757d;/* Couleur de bouton Bootstrap */\n"
+"    color: white;\n"
+"    border: none;\n"
+"    border-radius: 5px;\n"
+"    padding: 10px 20px;\n"
+"    cursor: pointer;\n"
+"    transition: background-color 0.3s ease;\n"
+"}\n"
+"\n"
+"/* Style pour les boutons au survol */\n"
+".QPushButto"
+                        "n:hover{\n"
+"    background-color: #6c757d; /* Couleur de bouton plus fonc\u00e9e au survol */\n"
+"}\n"
+"\n"
+"/* Style pour les champs de texte */\n"
+".QLineEdit {\n"
+"    border: 1px solid #ced4da; /* Couleur de bordure par d\u00e9faut */\n"
+"    border-radius: 5px;\n"
+"    padding: 5px 10px;\n"
+"    width: 100%;\n"
+"    margin-bottom: 10px;\n"
+"    transition: border-color 0.3s ease;\n"
+"}\n"
+"\n"
+"/* Style pour les champs de texte avec focus */\n"
+".QLineEdit:focus {\n"
+"    border-color:  #6c757d;\n"
+"    outline: none;\n"
+"}\n"
+"/* Style pour l'\u00e9tat hover des boutons */\n"
+".QPushButton:hover {\n"
+"    background-color: #5a6268; /* Nouvelle couleur de fond au survol */\n"
+"}\n"
+"\n"
+"/* Style pour l'\u00e9tat press\u00e9 (active) des boutons */\n"
+".QPushButton:pressed {\n"
+"    background-color: #343a40; /* Nouvelle couleur de fond au clic */\n"
+"}\n"
+"")
+        self.sub_frame_space_client.setFrameShape(QFrame.StyledPanel)
+        self.sub_frame_space_client.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_13 = QVBoxLayout(self.sub_frame_space_client)
+        self.verticalLayout_13.setObjectName(u"verticalLayout_13")
+        self.horizontalLayout_3 = QHBoxLayout()
+        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
+        self.frame_display_info = QFrame(self.sub_frame_space_client)
+        self.frame_display_info.setObjectName(u"frame_display_info")
+        self.frame_display_info.setMinimumSize(QSize(275, 0))
+        self.frame_display_info.setFrameShape(QFrame.StyledPanel)
+        self.frame_display_info.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_11 = QVBoxLayout(self.frame_display_info)
+        self.verticalLayout_11.setObjectName(u"verticalLayout_11")
+        self.gridLayout = QGridLayout()
+        self.gridLayout.setObjectName(u"gridLayout")
+        self.label_ti_nom = QLabel(self.frame_display_info)
+        self.label_ti_nom.setObjectName(u"label_ti_nom")
+        self.label_ti_nom.setMaximumSize(QSize(70, 16777215))
+
+        self.gridLayout.addWidget(self.label_ti_nom, 0, 0, 1, 1)
+
+        self.label_nom = QLabel(self.frame_display_info)
+        self.label_nom.setObjectName(u"label_nom")
+
+        self.gridLayout.addWidget(self.label_nom, 0, 1, 1, 1)
+
+        self.label_ti_prenom = QLabel(self.frame_display_info)
+        self.label_ti_prenom.setObjectName(u"label_ti_prenom")
+        self.label_ti_prenom.setMaximumSize(QSize(70, 16777215))
+
+        self.gridLayout.addWidget(self.label_ti_prenom, 1, 0, 1, 1)
+
+        self.label_prenom = QLabel(self.frame_display_info)
+        self.label_prenom.setObjectName(u"label_prenom")
+
+        self.gridLayout.addWidget(self.label_prenom, 1, 1, 1, 1)
+
+        self.label_ti_adresse = QLabel(self.frame_display_info)
+        self.label_ti_adresse.setObjectName(u"label_ti_adresse")
+        self.label_ti_adresse.setMaximumSize(QSize(70, 16777215))
+
+        self.gridLayout.addWidget(self.label_ti_adresse, 2, 0, 1, 1)
+
+        self.label_adress = QLabel(self.frame_display_info)
+        self.label_adress.setObjectName(u"label_adress")
+
+        self.gridLayout.addWidget(self.label_adress, 2, 1, 1, 1)
+
+        self.label_ti_contact = QLabel(self.frame_display_info)
+        self.label_ti_contact.setObjectName(u"label_ti_contact")
+        self.label_ti_contact.setMaximumSize(QSize(70, 16777215))
+
+        self.gridLayout.addWidget(self.label_ti_contact, 3, 0, 1, 1)
+
+        self.label_contact = QLabel(self.frame_display_info)
+        self.label_contact.setObjectName(u"label_contact")
+
+        self.gridLayout.addWidget(self.label_contact, 3, 1, 1, 1)
+
+
+        self.verticalLayout_11.addLayout(self.gridLayout)
+
+        self.pushButton = QPushButton(self.frame_display_info)
+        self.pushButton.setObjectName(u"pushButton")
+        self.pushButton.setMinimumSize(QSize(0, 40))
+
+        self.verticalLayout_11.addWidget(self.pushButton)
+
+
+        self.horizontalLayout_3.addWidget(self.frame_display_info)
+
+        self.frame_modif_info = QFrame(self.sub_frame_space_client)
+        self.frame_modif_info.setObjectName(u"frame_modif_info")
+        self.frame_modif_info.setMinimumSize(QSize(355, 266))
+        self.frame_modif_info.setFrameShape(QFrame.StyledPanel)
+        self.frame_modif_info.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_12 = QVBoxLayout(self.frame_modif_info)
+        self.verticalLayout_12.setObjectName(u"verticalLayout_12")
+        self.gridLayout_7 = QGridLayout()
+        self.gridLayout_7.setObjectName(u"gridLayout_7")
+        self.label_ti_adresse_2 = QLabel(self.frame_modif_info)
+        self.label_ti_adresse_2.setObjectName(u"label_ti_adresse_2")
+
+        self.gridLayout_7.addWidget(self.label_ti_adresse_2, 2, 0, 1, 1)
+
+        self.label_ti_prenom_2 = QLabel(self.frame_modif_info)
+        self.label_ti_prenom_2.setObjectName(u"label_ti_prenom_2")
+
+        self.gridLayout_7.addWidget(self.label_ti_prenom_2, 1, 0, 1, 1)
+
+        self.label_ti_nom_2 = QLabel(self.frame_modif_info)
+        self.label_ti_nom_2.setObjectName(u"label_ti_nom_2")
+
+        self.gridLayout_7.addWidget(self.label_ti_nom_2, 0, 0, 1, 1)
+
+        self.label_ti_contact_2 = QLabel(self.frame_modif_info)
+        self.label_ti_contact_2.setObjectName(u"label_ti_contact_2")
+
+        self.gridLayout_7.addWidget(self.label_ti_contact_2, 3, 0, 1, 1)
+
+        self.modif_nom_le = QLineEdit(self.frame_modif_info)
+        self.modif_nom_le.setObjectName(u"modif_nom_le")
+        self.modif_nom_le.setMinimumSize(QSize(0, 30))
+
+        self.gridLayout_7.addWidget(self.modif_nom_le, 0, 1, 1, 1)
+
+        self.modif_prenom_le = QLineEdit(self.frame_modif_info)
+        self.modif_prenom_le.setObjectName(u"modif_prenom_le")
+        self.modif_prenom_le.setMinimumSize(QSize(0, 30))
+
+        self.gridLayout_7.addWidget(self.modif_prenom_le, 1, 1, 1, 1)
+
+        self.modif_adress_le = QLineEdit(self.frame_modif_info)
+        self.modif_adress_le.setObjectName(u"modif_adress_le")
+        self.modif_adress_le.setMinimumSize(QSize(0, 30))
+
+        self.gridLayout_7.addWidget(self.modif_adress_le, 2, 1, 1, 1)
+
+        self.modif_contact_le = QLineEdit(self.frame_modif_info)
+        self.modif_contact_le.setObjectName(u"modif_contact_le")
+        self.modif_contact_le.setMinimumSize(QSize(0, 30))
+
+        self.gridLayout_7.addWidget(self.modif_contact_le, 3, 1, 1, 1)
+
+
+        self.verticalLayout_12.addLayout(self.gridLayout_7)
+
+        self.pushButton_2 = QPushButton(self.frame_modif_info)
+        self.pushButton_2.setObjectName(u"pushButton_2")
+        self.pushButton_2.setMinimumSize(QSize(0, 40))
+
+        self.verticalLayout_12.addWidget(self.pushButton_2)
+
+
+        self.horizontalLayout_3.addWidget(self.frame_modif_info)
+
+        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_3.addItem(self.horizontalSpacer)
+
+
+        self.verticalLayout_13.addLayout(self.horizontalLayout_3)
+
+        self.verticalSpacer_3 = QSpacerItem(20, 187, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.verticalLayout_13.addItem(self.verticalSpacer_3)
+
+
+        self.verticalLayout_7.addWidget(self.sub_frame_space_client)
+
         StackedWidget.addWidget(self.space_client_page)
         self.space_admin_page = QWidget()
         self.space_admin_page.setObjectName(u"space_admin_page")
@@ -1107,6 +1337,173 @@ class Ui_StackedWidget(object):
         self.verticalLayout.addWidget(self.frame_lay_sa)
 
         StackedWidget.addWidget(self.space_admin_page)
+        self.modif_page = QWidget()
+        self.modif_page.setObjectName(u"modif_page")
+        self.verticalLayout_8 = QVBoxLayout(self.modif_page)
+        self.verticalLayout_8.setObjectName(u"verticalLayout_8")
+        self.label_2 = QLabel(self.modif_page)
+        self.label_2.setObjectName(u"label_2")
+        self.label_2.setMaximumSize(QSize(16777215, 70))
+        self.label_2.setStyleSheet(u"font-weight: bold;\n"
+"    margin-bottom: 5px;\n"
+"font-size:30px;")
+
+        self.verticalLayout_8.addWidget(self.label_2)
+
+        self.frame_4 = QFrame(self.modif_page)
+        self.frame_4.setObjectName(u"frame_4")
+        self.frame_4.setFrameShape(QFrame.StyledPanel)
+        self.frame_4.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_6 = QHBoxLayout(self.frame_4)
+        self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
+        self.horizontalSpacer_2 = QSpacerItem(281, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_6.addItem(self.horizontalSpacer_2)
+
+        self.verticalLayout_15 = QVBoxLayout()
+        self.verticalLayout_15.setObjectName(u"verticalLayout_15")
+        self.frame_modif_info_2 = QFrame(self.frame_4)
+        self.frame_modif_info_2.setObjectName(u"frame_modif_info_2")
+        self.frame_modif_info_2.setMinimumSize(QSize(355, 266))
+        self.frame_modif_info_2.setStyleSheet(u"#frame_modif_info_2 {\n"
+"    border: 1px solid rgba(108, 117, 125, 0.125); /* Couleur de bordure par d\u00e9faut */\n"
+"    border-radius: 10px;\n"
+"    padding: 10px;\n"
+"    background-color: white;\n"
+"    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n"
+"}\n"
+"\n"
+"/* Style pour la frame au survol */\n"
+"#frame_display_info:hover,#frame_modif_info:hover {\n"
+"    border-color: var(--bs-secondary-color); /* Couleur de bordure au survol */\n"
+"    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);\n"
+"}\n"
+"\n"
+"/* Style pour les labels */\n"
+".QLabel {\n"
+"    font-weight: bold;\n"
+"    margin-bottom: 5px;\n"
+"}\n"
+"\n"
+"/* Style pour les boutons */\n"
+".QPushButton{\n"
+"    background-color: #6c757d;/* Couleur de bouton Bootstrap */\n"
+"    color: white;\n"
+"    border: none;\n"
+"    border-radius: 5px;\n"
+"    padding: 10px 20px;\n"
+"    cursor: pointer;\n"
+"    transition: background-color 0.3s ease;\n"
+"}\n"
+"\n"
+"/* Style pour les boutons au survol */\n"
+".QPushButton:hover{\n"
+"    background-color: #6c757d; /* C"
+                        "ouleur de bouton plus fonc\u00e9e au survol */\n"
+"}\n"
+"\n"
+"/* Style pour les champs de texte */\n"
+".QLineEdit {\n"
+"    border: 1px solid #ced4da; /* Couleur de bordure par d\u00e9faut */\n"
+"    border-radius: 5px;\n"
+"    padding: 5px 10px;\n"
+"    width: 100%;\n"
+"    margin-bottom: 10px;\n"
+"    transition: border-color 0.3s ease;\n"
+"}\n"
+"\n"
+"/* Style pour les champs de texte avec focus */\n"
+".QLineEdit:focus {\n"
+"    border-color:  #6c757d;\n"
+"    outline: none;\n"
+"}\n"
+"/* Style pour l'\u00e9tat hover des boutons */\n"
+".QPushButton:hover {\n"
+"    background-color: #5a6268; /* Nouvelle couleur de fond au survol */\n"
+"}\n"
+"\n"
+"/* Style pour l'\u00e9tat press\u00e9 (active) des boutons */\n"
+".QPushButton:pressed {\n"
+"    background-color: #343a40; /* Nouvelle couleur de fond au clic */\n"
+"}\n"
+"")
+        self.frame_modif_info_2.setFrameShape(QFrame.StyledPanel)
+        self.frame_modif_info_2.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_14 = QVBoxLayout(self.frame_modif_info_2)
+        self.verticalLayout_14.setObjectName(u"verticalLayout_14")
+        self.gridLayout_8 = QGridLayout()
+        self.gridLayout_8.setObjectName(u"gridLayout_8")
+        self.label_ti_adresse_3 = QLabel(self.frame_modif_info_2)
+        self.label_ti_adresse_3.setObjectName(u"label_ti_adresse_3")
+
+        self.gridLayout_8.addWidget(self.label_ti_adresse_3, 2, 0, 1, 1)
+
+        self.label_ti_prenom_3 = QLabel(self.frame_modif_info_2)
+        self.label_ti_prenom_3.setObjectName(u"label_ti_prenom_3")
+
+        self.gridLayout_8.addWidget(self.label_ti_prenom_3, 1, 0, 1, 1)
+
+        self.label_ti_nom_3 = QLabel(self.frame_modif_info_2)
+        self.label_ti_nom_3.setObjectName(u"label_ti_nom_3")
+
+        self.gridLayout_8.addWidget(self.label_ti_nom_3, 0, 0, 1, 1)
+
+        self.label_ti_contact_3 = QLabel(self.frame_modif_info_2)
+        self.label_ti_contact_3.setObjectName(u"label_ti_contact_3")
+
+        self.gridLayout_8.addWidget(self.label_ti_contact_3, 3, 0, 1, 1)
+
+        self.mo_nom_cl = QLineEdit(self.frame_modif_info_2)
+        self.mo_nom_cl.setObjectName(u"mo_nom_cl")
+        self.mo_nom_cl.setMinimumSize(QSize(0, 30))
+
+        self.gridLayout_8.addWidget(self.mo_nom_cl, 0, 1, 1, 1)
+
+        self.mo_prenom_cl = QLineEdit(self.frame_modif_info_2)
+        self.mo_prenom_cl.setObjectName(u"mo_prenom_cl")
+        self.mo_prenom_cl.setMinimumSize(QSize(0, 30))
+
+        self.gridLayout_8.addWidget(self.mo_prenom_cl, 1, 1, 1, 1)
+
+        self.mo_adresse_cl = QLineEdit(self.frame_modif_info_2)
+        self.mo_adresse_cl.setObjectName(u"mo_adresse_cl")
+        self.mo_adresse_cl.setMinimumSize(QSize(0, 30))
+
+        self.gridLayout_8.addWidget(self.mo_adresse_cl, 2, 1, 1, 1)
+
+        self.mo_contact_cl = QLineEdit(self.frame_modif_info_2)
+        self.mo_contact_cl.setObjectName(u"mo_contact_cl")
+        self.mo_contact_cl.setMinimumSize(QSize(0, 30))
+
+        self.gridLayout_8.addWidget(self.mo_contact_cl, 3, 1, 1, 1)
+
+
+        self.verticalLayout_14.addLayout(self.gridLayout_8)
+
+        self.pushButton_3 = QPushButton(self.frame_modif_info_2)
+        self.pushButton_3.setObjectName(u"pushButton_3")
+        self.pushButton_3.setMinimumSize(QSize(0, 40))
+
+        self.verticalLayout_14.addWidget(self.pushButton_3)
+
+
+        self.verticalLayout_15.addWidget(self.frame_modif_info_2)
+
+        self.verticalSpacer_4 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.verticalLayout_15.addItem(self.verticalSpacer_4)
+
+
+        self.horizontalLayout_6.addLayout(self.verticalLayout_15)
+
+        self.horizontalSpacer_3 = QSpacerItem(281, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_6.addItem(self.horizontalSpacer_3)
+
+
+        self.verticalLayout_8.addWidget(self.frame_4)
+
+        StackedWidget.addWidget(self.modif_page)
 
         self.retranslateUi(StackedWidget)
 
@@ -1129,6 +1526,10 @@ class Ui_StackedWidget(object):
 #endif // QT_CONFIG(tooltip)
         self.toolButton.setText(QCoreApplication.translate("StackedWidget", u"...", None))
         self.bouton_modifier.setText(QCoreApplication.translate("StackedWidget", u"Modifier", None))
+        ___qtablewidgetitem = self.stock_tab.horizontalHeaderItem(0)
+        ___qtablewidgetitem.setText(QCoreApplication.translate("StackedWidget", u"produits", None));
+        ___qtablewidgetitem1 = self.stock_tab.horizontalHeaderItem(1)
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("StackedWidget", u"Stock", None));
         self.option_stockage.setTitle("")
 #if QT_CONFIG(tooltip)
         self.ajouter_produit_btn.setToolTip(QCoreApplication.translate("StackedWidget", u"<html><head/><body><p><span style=\" font-weight:700;\">Ajouter au Stock</span></p></body></html>", None))
@@ -1147,10 +1548,6 @@ class Ui_StackedWidget(object):
 #endif // QT_CONFIG(tooltip)
         self.supprimer_produit_btn.setText(QCoreApplication.translate("StackedWidget", u"Supprimer le produit", None))
         self.label_9.setText(QCoreApplication.translate("StackedWidget", u"STOCKAGE", None))
-        ___qtablewidgetitem = self.stock_tab.horizontalHeaderItem(0)
-        ___qtablewidgetitem.setText(QCoreApplication.translate("StackedWidget", u"produits", None));
-        ___qtablewidgetitem1 = self.stock_tab.horizontalHeaderItem(1)
-        ___qtablewidgetitem1.setText(QCoreApplication.translate("StackedWidget", u"Stock", None));
         self.label_title_list_clients.setText(QCoreApplication.translate("StackedWidget", u"Liste des clients", None))
         self.label_10.setText(QCoreApplication.translate("StackedWidget", u"Nom", None))
         self.label_11.setText(QCoreApplication.translate("StackedWidget", u"Email", None))
@@ -1171,10 +1568,31 @@ class Ui_StackedWidget(object):
         self.paye_wave.setText("")
         self.paye_orange_money.setText("")
         self.paye_visa.setText("")
+        self.label.setText(QCoreApplication.translate("StackedWidget", u"Espace Clients", None))
+        self.label_ti_nom.setText(QCoreApplication.translate("StackedWidget", u"Nom :", None))
+        self.label_nom.setText("")
+        self.label_ti_prenom.setText(QCoreApplication.translate("StackedWidget", u"Prenom :", None))
+        self.label_prenom.setText("")
+        self.label_ti_adresse.setText(QCoreApplication.translate("StackedWidget", u"Adresse :", None))
+        self.label_adress.setText("")
+        self.label_ti_contact.setText(QCoreApplication.translate("StackedWidget", u"contact :", None))
+        self.label_contact.setText("")
+        self.pushButton.setText(QCoreApplication.translate("StackedWidget", u"Modifier les Informations", None))
+        self.label_ti_adresse_2.setText(QCoreApplication.translate("StackedWidget", u"Adresse :", None))
+        self.label_ti_prenom_2.setText(QCoreApplication.translate("StackedWidget", u"Prenom :", None))
+        self.label_ti_nom_2.setText(QCoreApplication.translate("StackedWidget", u"Nom :", None))
+        self.label_ti_contact_2.setText(QCoreApplication.translate("StackedWidget", u"contact :", None))
+        self.pushButton_2.setText(QCoreApplication.translate("StackedWidget", u"enregistrer les Informations", None))
         self.label_title.setText(QCoreApplication.translate("StackedWidget", u"Espace Administrateur", None))
         self.gest_prod_btn.setText(QCoreApplication.translate("StackedWidget", u"Gestion des Produits", None))
         self.gest_client_btn.setText(QCoreApplication.translate("StackedWidget", u"Gestion des Client", None))
         self.gest_compt_admin_btn.setText(QCoreApplication.translate("StackedWidget", u"Gesstion du compte Admin", None))
         self.come_back_home.setText(QCoreApplication.translate("StackedWidget", u"Retour \u00e0 l'accueil", None))
+        self.label_2.setText(QCoreApplication.translate("StackedWidget", u"Modifier les informations du clients", None))
+        self.label_ti_adresse_3.setText(QCoreApplication.translate("StackedWidget", u"Adresse :", None))
+        self.label_ti_prenom_3.setText(QCoreApplication.translate("StackedWidget", u"Prenom :", None))
+        self.label_ti_nom_3.setText(QCoreApplication.translate("StackedWidget", u"Nom :", None))
+        self.label_ti_contact_3.setText(QCoreApplication.translate("StackedWidget", u"contact :", None))
+        self.pushButton_3.setText(QCoreApplication.translate("StackedWidget", u"enregistrer les Informations", None))
     # retranslateUi
 
