@@ -1,6 +1,5 @@
-from PySide6.QtCore import Qt
-from PySide6.QtGui import QColor, QFont
-from PySide6.QtWidgets import QApplication, QWidget, QVBoxLayout, QHBoxLayout, QLabel, QPushButton, QSpinBox, QFrame
+from qt_core import *
+# from resources_rc import *
 
 
 class ProductWidget(QWidget):
@@ -47,25 +46,40 @@ class ProductWidget(QWidget):
             }
         '''
 
-        self.bouton_add = QPushButton("+")
+        self.bouton_add = QPushButton()
+        icon_add = QIcon(
+            "../image/add_FILL0_wght400_GRAD0_opsz40.svg")  # Remplacez "chemin/vers/icon_add.png" par le chemin de votre icône d'ajout
+        self.bouton_add.setIcon(icon_add)
+        self.bouton_add.setIconSize(QSize(25, 25))
+
         self.bouton_add.setFixedSize(35, 35)
         self.bouton_add.setStyleSheet(button_style)
 
-        self.bouton_rem = QPushButton("-")
+        self.bouton_rem = QPushButton()
+        icon_rem = QIcon(
+            ":/img/image/remove_FILL0_wght400_GRAD0_opsz48.svg")  # Remplacez "chemin/vers/icon_rem.png" par le chemin de votre icône de suppression
+        self.bouton_rem.setIcon(icon_rem)
+        self.bouton_rem.setIconSize(QSize(25, 25))
         self.bouton_rem.setFixedSize(35, 35)
         self.bouton_rem.setStyleSheet(button_style)
 
         self.bouton_delete = QPushButton()
+        icon_delete = QIcon(
+            "../image/delete_FILL0_wght400_GRAD0_opsz40.svg")  # Remplacez "chemin/vers/icon_delete.png" par le chemin de votre icône de suppression de produit
+        self.bouton_delete.setIcon(icon_delete)
+        self.bouton_delete.setIconSize(QSize(40, 40))
         self.bouton_delete.setFixedSize(40, 40)
         self.bouton_delete.setStyleSheet('''
             QPushButton {
                 border: none;
                 background-color:#ccc;
-                /*border-image: url(delete.png);
             }
         ''')
 
         self.bouton_im_prod = QPushButton()
+        icon_prod = QIcon(
+            "chemin/vers/icon_prod.png")  # Remplacez "chemin/vers/icon_prod.png" par le chemin de votre icône d'image de produit
+        self.bouton_im_prod.setIcon(icon_prod)
         self.bouton_im_prod.setFixedSize(101, 101)
 
         self.quantite = QSpinBox()
